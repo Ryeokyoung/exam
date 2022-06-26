@@ -3,12 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+div {
+	width: 50px;
+	height: 50px;
+	background-color: blueviolet;
+	transition: all 1s;
+}
+
+div:hover {
+	background-color: brown;
+	border-radius: 50%;
+}
+</style>
 </head>
 <body>
-
-<input type="text">
-<button type="button">9</button>
-
+	<input id="textnote" type="text">
+	<table width="500px" height="500px">
+		<tr>
+			<td><button id="bt" type="button">9</button></td>
+			<td><button id="bt" type="button">8</button></td>
+			<td><button id="bt" type="button">7</button></td>
+			<td><button id="bt" type="button"value"/">÷</button></td>
+		</tr>
+		<tr>
+			<td><button id="bt" type="button">6</button></td>
+			<td><button id="bt" type="button">5</button></td>
+			<td><button id="bt" type="button">4</button></td>
+			<td><button id="bt" type="button"value"*">x</button></td>
+		</tr>
+		<tr>
+			<td><button id="bt" type="button">3</button></td>
+			<td><button id="bt" type="button">2</button></td>
+			<td><button id="bt" type="button">1</button></td>
+			<td><button id="bt" type="button"value"-">-</button></td>
+		</tr>
+		<tr>
+			<td><button id="bt" type="button">0</button></td>
+			<td><button id="bt" type="button">C</button></td>
+			<td><button id="bt" type="button">=</button></td>
+			<td><button id="bt" type="button"value"+">+</button></td>
+		</tr>
+	</table>
 
 </body>
 </html>
