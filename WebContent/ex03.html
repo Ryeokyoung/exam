@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립</h1>
+
+	<h2>문제</h2>
+
+	주어진 숫자가 60점 이상이면 "합격입니다."
+	<br> 60점 미만이면 ""불합격입니다.” 를 브라우저에 출력하세요.
+	<br>
+	<br>
+
+
+</body>
+
+<script type="text/javascript">
+	var point = prompt("점수를 입력하세요"); //prompt = Scanner 자바스크립트에서는 파일찾기 같은 작은 창이 새로 띄워짐 
+										/*var point = prompt();
+	  									  console.log(point); */
+	console.log(typeof point);
+	if (point >= 60) {                 //자바랑 형태는 같으나 변수(var point =prompt();) 부분이 다름 
+		console.log("합격입니다.");
+		document.write("합격입니다.");    //println은 console.log혹은 document.write중 하나를 쓰면 됨  
+	} else {						   //(document는 본문안에 작성하기)
+		console.log("불합격입니다.");
+		document.write("불합격입니다.");
+	}
+</script>
+</html>
