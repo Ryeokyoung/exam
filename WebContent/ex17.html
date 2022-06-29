@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="./jquery-1.12.4.js"></script><!--jquery library의 데이터를 쓸 수 있음--> 
 </head>
 <body>
 	<h1>자바스크립트</h1>
@@ -16,13 +17,58 @@
 </body>
 <script type="text/javascript">
 	window.onload = function() {
-		var testButton = document.getElementById("btn");
-		var testArea = document.getElementById("display");
 
-		console.log(testArea);
-		testButton.onclick = function() {
-			testArea.innerHTML = "<font color='red'>홍길동<font>";
+		/*상상
+		var testButton = {
+			id: "btn",
+			tag: "button",
+			type: "button",
+			innerHTML: "테스트 버튼",
+			onclick: function(){}  //just 시각화 
 		};
+		
+		var testArea = {
+			id: "diaplay",
+			tag: h3,
+			innerHTML: 이름출력영역,
+			onclick: function(){}
+		}
+		
+		/*
+		 window.onload = function() {
+		 var testButton = document.getElementById("btn"); 
+		 var testArea = document.getElementById("display");
+
+		 console.log(testArea);
+		 testButton.onclick = function() {
+		 testArea.innerHTML = "<font color='red'>홍길동<font>"; 
+		 };
+		 };
+		 */
+
+		//자바스크립트를 함수로 만드는것 자바스크립트 덩어리 
+		// ///////////////////////////////////////////////////////////화면제어할 때 주로 쓰는 것 jquery
+                                                                     // jquery.zip파일의 파일이 필요함 
+		//jquery 이벤트 처리
+		//상상
+		/*
+		var testButton = {
+			id: "btn",
+			tag: "button",
+			type: "button",
+			on: function("keydown", b){} //testButton.on("click",function)으로 인해 만들어짐 
+		};
+		 */
+
+		var testButton = $("#btn");  //id는 btn인데 태크인지 아이디인지 구별을 못해서 #을 넣어주면 id로 인식함 
+		var testArea = $("#display");
+
+		testButton.on("click", function() { //on이라는 메소드를 갖게 됨 : 실행해라 //function (if문 등등 여러가지가 들어감 ... )
+			console.log("클릭 jquery");
+
+			testArea.html('<font color="blue">김려경</font>'); //css 
+		});
+
 	};
 </script>
 </html>

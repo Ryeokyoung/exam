@@ -5,18 +5,42 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input id="left" type="text" value="123"> + <input id="right" type="text" value="1555">
+	<input id="left" type="text" value="123"> +
+	<input id="right" type="text" value="1555"> //id는 서로 달라야함 
 	<br>
+	
 	<button id="btnPlus" type="button">더하기</button>
 	<p id="display">13</p>
 	<p>결과값</p>
 </body>
 <script type="text/javascript">
 	window.onload = function() {
-		var btnPlus = document.getElementById("btnPlus");
-		var display = document.getElementById("display");
+
+		var btn = document.getElementsByTagName("button"); //태그네임  자바스크립트로 만드는 방법 태그 ! 
+		console.log(btn);
+
+		var inputs = document.getElementsByTagName("input"); //태그네임
+		console.log(inputs); 
+		console.log(inputs[0]);
+		console.log(inputs[1]);
+
+		var tags = document.getElementsByClassName("red"); //클래스네임 자바스크립트로 만드는 방법 클래스  ! 
+		console.log(tags);
+		console.log(tags[0]);
+		console.log(tags[1]);
+
+		//html을 자바스크립트로 지지고 볶아야 하는데 완전 다른애라서 못함 (바꾸는 이유 : 관리하기 편하라고)
+		//따라서 html을 자바스크립트로 만들어야 함 
+		//자바스크립트로 만들고 나서 관리(조정)함 (자바스크립트의 필드나 메소드를 이용해서 )
+		//자바스크립트로 만드는 방법은 var btnplus~ , 태그,
+		
+		//////////////////////////////////////////////////////////////////////////////
+		var btnPlus = document.getElementById("btnPlus"); //아이디 // 자바스크립트로 바꿔놓음 btnplus ~ 
 		var left = document.getElementById("left");
 		var right = document.getElementById("right");
+		var display = document.getElementById("display");
+ 
+		
 
 		//버튼을 클릭했을 때(이벤트)
 		btnPlus.onclick = function() {
@@ -26,7 +50,7 @@
 			var rightNo = parseInt(right.value);
 			var sum = leftNo + rightNo;
 
-			display.innerHTML =  sum;
+			display.innerHTML = sum;
 
 		};
 
